@@ -27,8 +27,8 @@ function bubbleSort(arr) {
     }
     return arr;
 }
-
+document.querySelector("#unsortedArray").innerText = arraySort;
 SortArray = bubbleSort(arraySort);
 console.log(SortArray);
-document.querySelector("#unsortedArray").innerText = arraySort;
+
 document.getElementById("sortedArray").innerHTML = SortArray;
