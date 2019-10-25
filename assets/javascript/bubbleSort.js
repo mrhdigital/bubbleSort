@@ -1,6 +1,6 @@
 //alert("Hello");
 
-var arrayUnsorted = [45, 50, 23, 2];
+var arrayUnsorted = [1, 326, 251, 24, 249];
 var arrayUnsortedCopy = (arrayUnsorted.slice(0, arrayUnsorted.length));
 
 function bubbleSort(arr) {
@@ -9,7 +9,7 @@ function bubbleSort(arr) {
     while (!sorted) {
         sorted = true;
         // // console.log(sorted);
-         for (var i = 0; i < 3; i++) {
+         for (var i = 0; i < arr.length; i++) {
             // console.log(i);
             if (arr[i] > arr[i + 1]) {
                 sorted = false;
