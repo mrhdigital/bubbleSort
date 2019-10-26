@@ -75,7 +75,7 @@ startBtn1.addEventListener("click", function () {
                 result = "";
             }
 
-            arr.sort();
+            arr.sort(function(a, b){return a-b});
         }
     
     document.querySelector("#sortedArray").innerText = arr;
