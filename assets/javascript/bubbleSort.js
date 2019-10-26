@@ -1,26 +1,23 @@
 //alert("Hello");
 
 
-    // window.onload = function() {
-    //     what();
-    //     function what(){
-    //         document.getElementById("whileCounter").innerHTML = "hi";
-    //     };
-    // }
-
 var arrayUnsorted = [1, 326, 251, 24, 249];
+// create the copy of arrayUnsorted so content of the array will not change when "arrayUnsorted is sorted"
 var arrayUnsortedCopy = (arrayUnsorted.slice(0, arrayUnsorted.length));
+
+
+// Global variables for counters
 var whileCounter = 0;
 var ifCounter = 0;
 var forCounter = 0;
-
+// create function bubbleSort that accept array as parameter.
 function bubbleSort(arr) {
 
     var sorted = false
     while (!sorted) {
         sorted = true;
         whileCounter++;
-         console.log(whileCounter);
+        console.log(whileCounter);
         for (var i = 0; i < arr.length; i++) {
             forCounter++;
             // console.log(i);
@@ -39,41 +36,37 @@ function bubbleSort(arr) {
         }
 
     }
-   
+
     return arr;
-    
+
 }
 
 
-// document.getElementById("sortedArray").innerHTML = arrayUnsorted;
+
 
 var startBtn = document.querySelector("#start");
 
 startBtn.addEventListener("click", function () {
-    // Get the sorted array, insert its contents into the #result div
-    //var sortedArr = bubbleSort(unsortedArr);
+    
     document.querySelector("#unsortedArray").innerText = arrayUnsortedCopy.join(", ");
 });
-// document.querySelector("#unsortedArray").innerText = arrayUnsorted;
-// SortArray = bubbleSort(arrayUnsorted);
-// console.log(arrayUnsorted);
+
 
 var sortBtn = document.querySelector("#sort");
 
 sortBtn.addEventListener("click", function () {
-    // Get the sorted array, insert its contents into the #result div
-    //var sortedArr = bubbleSort(unsortedArr);
+    
     SortArray = bubbleSort(arrayUnsorted);
     document.querySelector("#sortedArray").innerText = SortArray.join(", ");
     document.getElementById("whileCounter").innerHTML = whileCounter;
     document.getElementById("ifCounter").innerHTML = ifCounter;
     document.getElementById("forCounter").innerHTML = forCounter;
 
-   
 
 
 
-    
+
+
 
 });
 
