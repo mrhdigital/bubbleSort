@@ -60,8 +60,29 @@ startBtn1.addEventListener("click", function () {
     
     var userInputText = document.getElementById("inputArray").value;
     console.log(userInputText);
-    document.querySelector("#sortedArray").innerText = userInputText;
+   
+    var arr = [];
+    var result = userInputText.charAt(0);
+    for(var i = 0; i < userInputText.length; i++) {
+        if (userInputText.charAt(i+1) === ",") {
+            result = result;
+        }
+        else {
+            result = result + userInputText.charAt(i+1);
+        }
+            if((userInputText.charAt(i+1) === ",")  || (userInputText.charAt(i+1) === "")) {
+                arr.push(result);
+                result = "";
+            }
+
+            arr.sort();
+        }
+    
+    document.querySelector("#sortedArray").innerText = arr;
+    
 });
+
+
 
 
 // Get a reference to the sorted array button in he DOM, add a click event listener to it
