@@ -1,115 +1,117 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
 	<title>Bubble Sort!</title>
 	<!-- Required meta tags -->
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  </head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
 <body>
 	<!-- <h1> Bubble Sort!</h1>
 	<p> Select your number as [3,66,2] </p>
     <p id = "userSelect" ></p> -->
-    
 
-    <div class="container-fluid">
-			
+
+	<div class="container-fluid">
+
 		<div class="card1">
-			
+
 			<div class="card-body">
-	<!-- <p > Select your Options [r, p , or s] </p> -->
+				<!-- <p > Select your Options [r, p , or s] </p> -->
 				<h1 class="display-3"> Bubble Sort!</h1>
-			<span id = "userSelect" class="lead1">Let's Sort !</span>
-			
-			<div>
-				<audio id="myAudio">
+				<span id="userSelect" class="lead1">Let's Sort !</span>
+
+				<div>
+					<audio id="myAudio">
 						<source src="assets/music/birdsChirping.mp3" type="audio/mpeg">
-				</audio>
-			</div>
-				
+					</audio>
+				</div>
+
 			</div>
 		</div>
 
-		
-					
-				
-					
-</div>
 
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-4">
-			<div class="card">
-				<h5 class="card-header">
-					
-					<button type="button" id = "start" class="btn btn-primary btn-lg">Click for Unsorted Array</button>
-				</h5>
-				<div class="card-body">
-					<p class="card-text">
-						<span id = "unsortedArray"></span>
-					</p>
-				</div>
-				<div class="card-footer">
-						<span class="responsive" id = "yourChoiceImage"></span>
+
+
+
+	</div>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="card">
+					<h5 class="card-header">
+
+						<button type="button" id="start" class="btn btn-primary btn-lg">Click for Unsorted
+							Array</button>
+					</h5>
+					<div class="card-body">
+						<p class="card-text">
+							<span id="unsortedArray"></span>
+						</p>
+					</div>
+					<div class="card-footer">
+						<span class="responsive" id="yourChoiceImage"></span>
 						<!-- <img src="assets/images/Rock.jpeg" alt="My Image" style="width:300px">  -->
-					<!-- Card footer -->
+						<!-- Card footer -->
+					</div>
 				</div>
 			</div>
-		</div>
-		
-		<div class="col-md-4">
-			<div class="card">
-				<h5 class="card-header">
-					While Counts: <span id =winCounter> 0 </span>
-				</h5>
-				<div class="card-body">
-					<p class="card-text">
-						For Counts: <span id =lossCounter> 0 </span> 
-					</p>
+
+			<div class="col-md-4">
+				<div class="card">
+					<h5 class="card-header">
+						While Counts: <span id="whileCounter"> 0 </span>
+					</h5>
+					<div class="card-body">
+						<p class="card-text">
+							For Counts: <span id="lossCounter"> 0 </span>
+						</p>
+					</div>
+					<div class="card-footer">
+						If Counts: <span id="tiesCounter"> 0 </span>
+					</div>
+					<div class="card-footer">
+						<span id="tiesCounter1"> Sort Message </span>
+					</div>
+					<div class="card-footer1">
+						<span id="gameMessage"> </span>
+					</div>
 				</div>
-				<div class="card-footer">
-					If Counts:  <span id = "tiesCounter"> 0 </span> 
-				</div>
-				<div class="card-footer">
-					  <span id = "tiesCounter1"> Sort Message </span> 
-				</div>
-				<div class="card-footer1">
-					<span id = "gameMessage">  </span> 
-			  </div>
+
 			</div>
-			
-		</div>
-		
-		<div class="col-md-4">
-			<div class="card">
-				<h5 class="card-header">
-				
-					<button type="button" id = "sort" class="btn btn-primary btn-lg">Click for Sorted Array</button>
-				</h5>
-				<div class="card-body">
-					<p class="card-text">
-						<span id = "sortedArray"></span>
-					</p>
-				</div>
-				<div class="card-footer">
-						<span class="responsive" id = "compuerChoiceImage"></span>
-					<!-- Card footer -->
+
+			<div class="col-md-4">
+				<div class="card">
+					<h5 class="card-header">
+
+						<button type="button" id="sort" class="btn btn-primary btn-lg">Click for Sorted Array</button>
+					</h5>
+					<div class="card-body">
+						<p class="card-text">
+							<span id="sortedArray"></span>
+						</p>
+					</div>
+					<div class="card-footer">
+						<span class="responsive" id="compuerChoiceImage"></span>
+						<!-- Card footer -->
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
 
-<!-- linked to javascript fiel -->
-<script src = "assets\javascript\bubbleSort.js"> </script>
-
-
+	<!-- linked to javascript fiel -->
+	<script src="assets\javascript\bubbleSort.js"> </script>
 
 
 
@@ -118,15 +120,23 @@
 
 
 
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.js"
+		integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
 
 
 
 
 
 </body>
-</html> 
+
+</html>
