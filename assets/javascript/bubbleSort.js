@@ -1,12 +1,12 @@
 //alert("Hello");
 
 
-    window.onload = function() {
-        what();
-        function what(){
-            document.getElementById("whileCounter").innerHTML = "hi";
-        };
-    }
+    // window.onload = function() {
+    //     what();
+    //     function what(){
+    //         document.getElementById("whileCounter").innerHTML = "hi";
+    //     };
+    // }
 
 var arrayUnsorted = [1, 326, 251, 24, 249];
 var arrayUnsortedCopy = (arrayUnsorted.slice(0, arrayUnsorted.length));
@@ -61,7 +61,7 @@ sortBtn.addEventListener("click", function () {
     //var sortedArr = bubbleSort(unsortedArr);
     SortArray = bubbleSort(arrayUnsorted);
     document.querySelector("#sortedArray").innerText = SortArray.join(", ");
-
+    document.getElementById("whileCounter").innerHTML = whileCounter;
 
    
 
