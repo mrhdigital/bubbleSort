@@ -51,6 +51,16 @@ startBtn.addEventListener("click", function () {
     document.querySelector("#unsortedArray").innerText = arrayUnsortedCopy.join(", ");
 });
 
+
+// Get a reference to the unsorted array button in he DOM, add a click event listener to it
+var startBtn1 = document.querySelector("#start1");
+
+startBtn1.addEventListener("click", function () {
+    // insert the contents of the "arrayUnsortedCopy" into the span with id = #unsortedArray
+    document.querySelector("#inputArray").innerText = "Hello";
+});
+
+
 // Get a reference to the sorted array button in he DOM, add a click event listener to it
 var sortBtn = document.querySelector("#sort");
 
