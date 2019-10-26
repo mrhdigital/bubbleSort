@@ -11,6 +11,8 @@
 var arrayUnsorted = [1, 326, 251, 24, 249];
 var arrayUnsortedCopy = (arrayUnsorted.slice(0, arrayUnsorted.length));
 var whileCounter = 0;
+var ifCounter = 0;
+var forCounter = 0;
 
 function bubbleSort(arr) {
 
@@ -20,9 +22,11 @@ function bubbleSort(arr) {
         whileCounter++;
          console.log(whileCounter);
         for (var i = 0; i < arr.length; i++) {
+            forCounter++;
             // console.log(i);
             if (arr[i] > arr[i + 1]) {
                 sorted = false;
+                ifCounter++;
                 // console.log("for");
                 var temp = arr[i];
                 // console.log(temp);
@@ -62,6 +66,8 @@ sortBtn.addEventListener("click", function () {
     SortArray = bubbleSort(arrayUnsorted);
     document.querySelector("#sortedArray").innerText = SortArray.join(", ");
     document.getElementById("whileCounter").innerHTML = whileCounter;
+    document.getElementById("ifCounter").innerHTML = ifCounter;
+    document.getElementById("forCounter").innerHTML = forCounter;
 
    
 
