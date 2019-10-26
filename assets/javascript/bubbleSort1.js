@@ -57,7 +57,10 @@ var startBtn1 = document.querySelector("#start1");
 
 startBtn1.addEventListener("click", function () {
     // insert the contents of the "arrayUnsortedCopy" into the span with id = #unsortedArray
-    document.querySelector("#inputArray").innerText = "Hello";
+    
+    var userInputText = document.getElementById("inputArray").value;
+    console.log(userInputText);
+    document.querySelector("#sortedArray").innerText = userInputText;
 });
 
 
