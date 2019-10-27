@@ -26,7 +26,7 @@ function bubbleSort(arr) {
             if (arr[i] > arr[i + 1]) {
                 sorted = false;
                 ifCounter++;
-                 console.log("for");
+                // console.log("for");
                 var temp = arr[i];
                 // console.log(temp);
                 arr[i] = arr[i + 1];
@@ -64,7 +64,7 @@ startBtn1.addEventListener("click", function () {
     
     var result = userInputText.charAt(0);
     for(var i = 0; i < userInputText.length; i++) {
-        if ((userInputText.charAt(i+1) === ",") | (userInputText.charAt(i+1) === " ")){
+        if ((userInputText.charAt(i+1) === ",") || (userInputText.charAt(i+1) === " ")){
             result = result;
         }
         else {
@@ -75,11 +75,11 @@ startBtn1.addEventListener("click", function () {
                 result = "";
             }
 
-            //userInputTextArray.sort(function(a, b){return a-b});
-         sortedArray1 = bubbleSort(userInputTextArray);
+            userInputTextArray.sort(function(a, b){return a-b});
+         //sortedArray1 = bubbleSort(userInputTextArray);
         }
     
-    document.querySelector("#sortedArray").innerText = sortedArray1;
+    document.querySelector("#sortedArray").innerText = userInputTextArray;
     
 }); 
 
