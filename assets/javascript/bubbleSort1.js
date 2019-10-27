@@ -1,6 +1,5 @@
 //alert("Hello");
 
-
 var arrayUnsorted = [1, 326, 251, 24, 249];
 // create the copy of arrayUnsorted so content of the array will not change when "arrayUnsorted is sorted"
 var arrayUnsortedCopy = (arrayUnsorted.slice(0, arrayUnsorted.length));
@@ -46,15 +45,6 @@ function bubbleSort(arr) {
 }
 
 // Get a reference to the unsorted array button in he DOM, add a click event listener to it
-// var startBtn = document.querySelector("#start");
-
-// startBtn.addEventListener("click", function () {
-//     // insert the contents of the "arrayUnsortedCopy" into the span with id = #unsortedArray
-//     document.querySelector("#unsortedArray").innerText = arrayUnsortedCopy.join(", ");
-// });
-
-
-// Get a reference to the unsorted array button in he DOM, add a click event listener to it
 var startBtn1 = document.querySelector("#start1");
 
 startBtn1.addEventListener("click", function () {
@@ -62,36 +52,11 @@ startBtn1.addEventListener("click", function () {
     
     var userInputText = document.getElementById("inputArray").value;
     console.log(userInputText);
-   
-    
-    // var result = userInputText.charAt(0);
-    // for(var i = 0; i < userInputText.length; i++) {
-    //     if ((userInputText.charAt(i+1) === ",") || (userInputText.charAt(i+1) === " ")){
-    //         result = result;
-    //     }
-    //     else {
-    //         result = result + userInputText.charAt(i+1);
-
-    //         // convert the result which is string into an interger(whole number) by using parseInt() method
-    //         result = parseInt(result, 10);
-    //     }
-    //         if((userInputText.charAt(i+1) === ",")  || (userInputText.charAt(i+1) === "")) {
-    //             userInputTextArray.push(result);
-    //             result = "";
-    //         }
 
     userInputTextArray =  userInputText.split(',').map(Number).filter(Boolean);
     console.log(userInputTextArray);
 
               userInputTextArrayCopy = ( userInputTextArray.slice(0,  userInputTextArray.length));
-           // userInputTextArray.sort(function(a, b){return a-b});
-         //sortedArray1 = bubbleSort(userInputTextArray);
-        
-        
-        // }
-    
-    //document.querySelector("#sortedArray").innerText = userInputTextArray;
-    
 }); 
 
 
