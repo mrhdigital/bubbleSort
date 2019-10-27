@@ -46,12 +46,12 @@ function bubbleSort(arr) {
 }
 
 // Get a reference to the unsorted array button in he DOM, add a click event listener to it
-var startBtn = document.querySelector("#start");
+// var startBtn = document.querySelector("#start");
 
-startBtn.addEventListener("click", function () {
-    // insert the contents of the "arrayUnsortedCopy" into the span with id = #unsortedArray
-    document.querySelector("#unsortedArray").innerText = arrayUnsortedCopy.join(", ");
-});
+// startBtn.addEventListener("click", function () {
+//     // insert the contents of the "arrayUnsortedCopy" into the span with id = #unsortedArray
+//     document.querySelector("#unsortedArray").innerText = arrayUnsortedCopy.join(", ");
+// });
 
 
 // Get a reference to the unsorted array button in he DOM, add a click event listener to it
