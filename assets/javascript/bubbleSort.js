@@ -1,7 +1,7 @@
 //alert("Hello");
 
 
-var arrayUnsorted = [11,21,81,51,2];
+var arrayUnsorted = [21,11,2];
 // create the copy of arrayUnsorted so content of the array will not change when "arrayUnsorted is sorted"
 var arrayUnsortedCopy = (arrayUnsorted.slice(0, arrayUnsorted.length));
 

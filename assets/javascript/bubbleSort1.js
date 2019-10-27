@@ -4,6 +4,8 @@
 var arrayUnsorted = [1, 326, 251, 24, 249];
 // create the copy of arrayUnsorted so content of the array will not change when "arrayUnsorted is sorted"
 var arrayUnsortedCopy = (arrayUnsorted.slice(0, arrayUnsorted.length));
+var userInputTextArrayCopy =[];
+//var userInputTextArrayCopyNum =[];
 var userInputTextArray = [];
 
 // Global variables for counters
@@ -21,17 +23,17 @@ function bubbleSort(arr) {
         // Loop through the array
         for (var i = 0; i < arr.length; i++) {
             forCounter++;
-            // console.log(i);
+             console.log(i);
             // if the current element is larger than the next element, swap them and set sorted to "false"
             if (arr[i] > arr[i + 1]) {
                 sorted = false;
                 ifCounter++;
-                // console.log("for");
+                 console.log("for");
                 var temp = arr[i];
-                // console.log(temp);
+                 console.log(temp);
                 arr[i] = arr[i + 1];
                 arr[i + 1] = temp;
-                // console.log(arr[i+1]);
+                 console.log(arr[i+1]);
 
             }
 
@@ -69,17 +71,25 @@ startBtn1.addEventListener("click", function () {
         }
         else {
             result = result + userInputText.charAt(i+1);
+
+            // convert the result which is string into an interger(whole number) by using parseInt() method
+            result = parseInt(result, 10);
         }
             if((userInputText.charAt(i+1) === ",")  || (userInputText.charAt(i+1) === "")) {
                 userInputTextArray.push(result);
                 result = "";
             }
 
-            userInputTextArray.sort(function(a, b){return a-b});
+    
+
+              userInputTextArrayCopy = ( userInputTextArray.slice(0,  userInputTextArray.length));
+           // userInputTextArray.sort(function(a, b){return a-b});
          //sortedArray1 = bubbleSort(userInputTextArray);
+        
+        
         }
     
-    document.querySelector("#sortedArray").innerText = userInputTextArray;
+    //document.querySelector("#sortedArray").innerText = userInputTextArray;
     
 }); 
 
@@ -91,12 +101,13 @@ var sortBtn = document.querySelector("#sort");
 
 sortBtn.addEventListener("click", function () {
     // call function bubbleSort and pass arguement arrayUnsorted and store the result in a variable SortArray
-    SortArray = bubbleSort(arrayUnsorted);
+    SortArray = bubbleSort(userInputTextArrayCopy)
     // insert the contents of the "arrayUnsorted" into the span with id = #sortedArray
     document.querySelector("#sortedArray").innerText = SortArray.join(", ");
     document.getElementById("whileCounter").innerHTML = whileCounter;
     document.getElementById("ifCounter").innerHTML = ifCounter;
-    document.getElementById("forCounter").innerHTML = forCounter;
+    document.getElementById("forCounter").innerHTML = forCounter + "," + userInputTextArray[0] 
+    + "," + userInputTextArray[1] + "," + userInputTextArray[2] ;
 
 });
 
