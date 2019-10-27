@@ -64,30 +64,31 @@ startBtn1.addEventListener("click", function () {
     console.log(userInputText);
    
     
-    var result = userInputText.charAt(0);
-    for(var i = 0; i < userInputText.length; i++) {
-        if ((userInputText.charAt(i+1) === ",") || (userInputText.charAt(i+1) === " ")){
-            result = result;
-        }
-        else {
-            result = result + userInputText.charAt(i+1);
+    // var result = userInputText.charAt(0);
+    // for(var i = 0; i < userInputText.length; i++) {
+    //     if ((userInputText.charAt(i+1) === ",") || (userInputText.charAt(i+1) === " ")){
+    //         result = result;
+    //     }
+    //     else {
+    //         result = result + userInputText.charAt(i+1);
 
-            // convert the result which is string into an interger(whole number) by using parseInt() method
-            result = parseInt(result, 10);
-        }
-            if((userInputText.charAt(i+1) === ",")  || (userInputText.charAt(i+1) === "")) {
-                userInputTextArray.push(result);
-                result = "";
-            }
+    //         // convert the result which is string into an interger(whole number) by using parseInt() method
+    //         result = parseInt(result, 10);
+    //     }
+    //         if((userInputText.charAt(i+1) === ",")  || (userInputText.charAt(i+1) === "")) {
+    //             userInputTextArray.push(result);
+    //             result = "";
+    //         }
 
-    
+    userInputTextArray =  userInputText.split(', ').map(Number);
+    console.log(userInputTextArray);
 
               userInputTextArrayCopy = ( userInputTextArray.slice(0,  userInputTextArray.length));
            // userInputTextArray.sort(function(a, b){return a-b});
          //sortedArray1 = bubbleSort(userInputTextArray);
         
         
-        }
+        // }
     
     //document.querySelector("#sortedArray").innerText = userInputTextArray;
     
