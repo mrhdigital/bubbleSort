@@ -80,7 +80,7 @@ startBtn1.addEventListener("click", function () {
     //             result = "";
     //         }
 
-    userInputTextArray =  userInputText.split(',').map(Number);
+    userInputTextArray =  userInputText.split(',').map(Number).filter(Boolean);
     console.log(userInputTextArray);
 
               userInputTextArrayCopy = ( userInputTextArray.slice(0,  userInputTextArray.length));
