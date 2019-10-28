@@ -83,8 +83,7 @@ startBtn1.addEventListener("click", function () {
               document.querySelector("#sortedArray").innerText = SortArray.join(", ");
               document.getElementById("whileCounter").innerHTML = whileCounter;
               document.getElementById("ifCounter").innerHTML = ifCounter;
-              document.getElementById("forCounter").innerHTML = forCounter + "," + userInputTextArray[0] 
-              + "," + userInputTextArray[1] + "," + userInputTextArray[2] ;
+              document.getElementById("forCounter").innerHTML = forCounter;
 
             }); 
 
