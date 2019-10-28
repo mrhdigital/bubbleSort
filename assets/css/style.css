@@ -33,11 +33,17 @@ body {
     color: #ee0404;
    }
 
-   #unsortedArray, #sortedArray, #tiesCounter, #winCounter, #lossCounter {
+   #unsortedArray, #sortedArray, #tiesCounter, #winCounter, #lossCounter, #inputArray {
 
     text-align: center;
     font-size: 26px;
     color: #ee0404;
+   }
+   #inputArray {
+
+    text-align: center;
+    font-size: 26px;
+    color: #04881a;
    }
 
    .card {

@@ -53,6 +53,27 @@ startBtn1.addEventListener("click", function () {
     var userInputText = document.getElementById("inputArray").value;
     console.log(userInputText);
 
+
+    // This code converts the user input text into the arrays of numbers//
+    // var result = userInputText.charAt(0);
+    // for(var i = 0; i < userInputText.length; i++) {
+    //     if ((userInputText.charAt(i+1) === ",") || (userInputText.charAt(i+1) === " ")){
+    //         result = result;
+    //     }
+    //     else {
+    //         result = result + userInputText.charAt(i+1);
+
+    //         // convert the result which is string into an interger(whole number) by using parseInt() method
+    //         result = parseInt(result, 10);
+    //     }
+    //         if((userInputText.charAt(i+1) === ",")  || (userInputText.charAt(i+1) === "")) {
+    //             userInputTextArray.push(result);
+    //             result = "";
+    //         }
+   // ****************************************************//
+   // The above code was replaced with the following code //
+   //******************************************************//
+
     userInputTextArray =  userInputText.split(',').map(Number).filter(Boolean);
     console.log(userInputTextArray);
 
