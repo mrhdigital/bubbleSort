@@ -78,7 +78,15 @@ startBtn1.addEventListener("click", function () {
     console.log(userInputTextArray);
 
               userInputTextArrayCopy = ( userInputTextArray.slice(0,  userInputTextArray.length));
-}); 
+              SortArray = bubbleSort(userInputTextArrayCopy)
+              // insert the contents of the "arrayUnsorted" into the span with id = #sortedArray
+              document.querySelector("#sortedArray").innerText = SortArray.join(", ");
+              document.getElementById("whileCounter").innerHTML = whileCounter;
+              document.getElementById("ifCounter").innerHTML = ifCounter;
+              document.getElementById("forCounter").innerHTML = forCounter + "," + userInputTextArray[0] 
+              + "," + userInputTextArray[1] + "," + userInputTextArray[2] ;
+
+            }); 
 
 
 
