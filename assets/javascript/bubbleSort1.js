@@ -48,10 +48,10 @@ function bubbleSort(arr) {
 var startBtn1 = document.querySelector("#start1");
 
 startBtn1.addEventListener("click", function () {
-    // insert the contents of the "arrayUnsortedCopy" into the span with id = #unsortedArray
+    
     
     var userInputText = document.getElementById("inputArray").value;
-    console.log(userInputText);
+    //console.log(userInputText);
 
 
     // This code converts the user input text into the arrays of numbers//
@@ -75,7 +75,7 @@ startBtn1.addEventListener("click", function () {
    //******************************************************//
 
     userInputTextArray =  userInputText.split(',').map(Number).filter(Boolean);
-    console.log(userInputTextArray);
+   // console.log(userInputTextArray);
 
               userInputTextArrayCopy = ( userInputTextArray.slice(0,  userInputTextArray.length));
               SortArray = bubbleSort(userInputTextArrayCopy)
@@ -86,22 +86,3 @@ startBtn1.addEventListener("click", function () {
               document.getElementById("forCounter").innerHTML = forCounter;
 
             }); 
-
-
-
-
-// Get a reference to the sorted array button in he DOM, add a click event listener to it
-var sortBtn = document.querySelector("#sort");
-
-sortBtn.addEventListener("click", function () {
-    // call function bubbleSort and pass arguement arrayUnsorted and store the result in a variable SortArray
-    SortArray = bubbleSort(userInputTextArrayCopy)
-    // insert the contents of the "arrayUnsorted" into the span with id = #sortedArray
-    document.querySelector("#sortedArray").innerText = SortArray.join(", ");
-    document.getElementById("whileCounter").innerHTML = whileCounter;
-    document.getElementById("ifCounter").innerHTML = ifCounter;
-    document.getElementById("forCounter").innerHTML = forCounter + "," + userInputTextArray[0] 
-    + "," + userInputTextArray[1] + "," + userInputTextArray[2] ;
-
-});
-
