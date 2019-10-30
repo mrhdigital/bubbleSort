@@ -1,7 +1,12 @@
 //alert("Hello");
 
 
-var arrayUnsorted = [21,11,2];
+var arrayUnsorted = [1, 326, 251, 24, 284, 364, 287, 74, 89,
+    63, 455, 130, 408, 378, 333, 49, 69, 335,
+    195, 145, 122, 454, 30, 277, 208, 293, 311,
+    88, 32, 5, 304, 239, 448, 61, 98, 382, 401,
+    452, 233, 150, 109, 252, 305, 51, 161, 480,
+    191, 44, 206, 451, 141, 182, 320, 355, 402];
 // create the copy of arrayUnsorted so content of the array will not change when "arrayUnsorted is sorted"
 var arrayUnsortedCopy = (arrayUnsorted.slice(0, arrayUnsorted.length));
 
