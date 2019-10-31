@@ -2,9 +2,9 @@
 
 **Use existing array or enter uer own array:**
 
-Couners: Counter are used to see the number of swaps performed in the bubble sort algorithm.
- 
- ### Technologies Used
+Couners: Counters are used to see the number of swaps performed in the bubble sort algorithm, how many times the elements were evaluated and how many times the algorithm was repeated.
+
+
 - HTML
 - CSS
 - JavaScript
